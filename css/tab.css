@@ -1,0 +1,43 @@
+.nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.nav ul .nav_item {
+    flex: 1; 
+    /*flex-basis: 33.33%; 这个也行*/
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: rgba(0,0,0,.6);
+    cursor: pointer;
+    position: relative;
+    /*相对定位要在对应的上面::after的下面横线在回对应，放在父元素.nav ul上不行*/
+}
+
+
+.nav ul .nav_item.active {
+    color: #31c27c;
+}
+
+.nav ul .nav_item.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #31c27c;
+    /*width: 33.33%;*/
+}
+
+.content .tab-content{
+    display: none;
+}
+.content .show {
+    display: block;
+}

@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#player {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    transition: .3s;
+    transform: translateY(-100%);
+    opacity: 0;
+    overflow: hidden;
+    /*z-index: 2;*/
+}
+
+#player.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.player-container {
+    height: 100vh;             /*不是100%*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+.player-header {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background: rgba(0,0,0,.1);
+}
+
+.player-header .icon-action {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: rgba(0,0,0,.1);
+    opacity: .6;
+    margin-right: 9px;
+    background-image: url(../images/sprite_play.png);
+    background-repeat: no-repeat;
+    background-size: 40px 380px;
+}
+
+.player-header .icon-action.icon-play {
+    background-position: 15px -152px;
+}
+.player-header .icon-action.icon-pause {
+    background-position: 17px -182px;
+}
+
+.player-header .album-cover {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin-right: 15px;
+}
+
+.player-header .song-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: calc(100% - 150px);
+}
+
+.player-header .song-name {
+    height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.player-header .singer-name {
+    height: 21px;
+    font-size: 14px;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.player-lyrics {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.player-lyrics-box {
+    height: 336px;
+    width: 100%;
+}
+.player-footer {
+    position: relative;
+}
+
+/*.player-footer .icon-list {
+    width: 40px;
+    height: 40px;
+    right: 13px;
+    top: -40px;
+    position: absolute;
+    background-image: url(../images/sprite_play.png);
+    background-repeat: no-repeat;
+    background-size: 40px 380px;
+    background-position: 8px 13px;
+}*/
+
+.player-footer .fa-angle-up {
+    font-size: 42px;
+    color: #bbb;
+    position: absolute;
+    top: -78px;
+    right: 20px;
+}
+
+.player-footer .actions {
+    height: 65px;
+    margin-top: 10px;
+}
+
+.player-footer .btn-download {
+    position: relative;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 50px;
+    padding: 0 55px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 999px;
+    background-color: #31c27c;
+    text-align: center;
+    background-image: url(../images/sprite_play.png);
+    background-repeat: no-repeat;
+    background-size: 43px 380px;
+    background-position: 6px -321px;
+    text-decoration: none;
+}
+
+.player-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    /*z-index: 1;*/
+    width: 100%;
+    background-size: cover;
+    background-position: bottom center;
+    filter: blur(15px);
+    transform: scale(1.15);
+}
+
+.progress {
+    position: absolute;
+    height: 40px;
+    /*line-height: 40px;*/
+    bottom: 74px;
+    width: 100%;
+}
+
+.progress .time-start, .progress .time-end {
+    position: absolute;
+    top: 0;
+    width: 55px;
+     line-height: 40px; 
+    text-align: center;
+    font-size: 12px;
+    color: #808080;
+    z-index: 1;
+}
+.progress .time-start {
+    left: 0;
+}
+.progress .time-end {
+    right: 0;
+}
+
+.progress .progress-bar {
+    position: absolute;
+    top: 20px;
+    left: 55px;
+    right: 55px;
+    height: 2px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+/*.progress-bar .progress-play {
+    background-color: #31c27c
+}*/

@@ -1,0 +1,91 @@
+.rank-wrap {
+    margin: 10px;
+}
+
+.rank-wrap .top-item {
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    display: flex;
+}
+
+.rank-wrap .top-item::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -4px;
+    width: 6px;
+    height: 6px;
+    transform: rotate(315deg);
+    border-right: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+/*float: left为什么不行*/
+.rank-wrap .top-item-media {
+    position: relative;
+    height: 100px;
+    display: block;
+    /*float: left;*/  
+}
+
+.top-item-media img {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+.rank-wrap .top-item-info {
+    position: relative;
+    margin: 0 10px 0 15px;
+    padding: 7px 10px 6px 0;
+}
+
+.top-item-title {       
+    font-size: 16px;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.top-item-title, .top-item-list {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.top-item-list {
+    font-size: 14px;
+    color: rgba(0,0,0,.5);
+}
+
+.top-item-song {
+    height: 20px;
+}
+
+.song-index {
+    float: left;
+    min-width: 10px;
+    text-align: center;
+    font-style: normal;
+}
+
+.song-name {
+    color: #000;
+    margin-left: 8px;
+    margin-right: 5px;
+}
+
+.rank-wrap .more {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.rank-wrap .more a {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 14px;
+    color: rgba(0,0,0,.6);
+}

@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background: #f4f4f4;
+}
+.header {
+    height: 44px;
+    background: #31c27c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    display: none;
+}
+.header img {
+    width: 90px;
+    height: 25px;
+    background-size: contain;
+    margin-left: 10px;
+}
+
+.header .download {
+    color: #fff;
+    font-size: 14px;
+    background: #149c5a;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 12px;
+    border-radius: 99px;
+    margin-right: 10px;
+}
+

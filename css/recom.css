@@ -1,0 +1,188 @@
+.radios {
+    margin: 0 10px 7px;  
+}
+
+.radios .title {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 11px;
+    font-weight: normal;
+}
+
+.radios .list {
+    display: flex;
+    align-items: center;
+    margin-right: -8px;
+}
+
+.radios .list-item {
+    flex: 1;
+    flex-basis: 40%;
+    padding-right: 8px;
+    margin-bottom: 10px;
+    background: #fff;
+    width: 50%;
+}
+
+.radios .list .list-item .list-media {
+    position: relative;
+    margin-bottom: 5px;
+}
+.radios .list .list-item .list-media img {
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+
+.radios .list .list-item .list-detail {
+    padding: 0 7px 5px;
+    color: #000;
+}
+
+.radios .list-title {
+    font-size: 14px;
+    height: 36px;
+    line-height: 18px;
+    width: 100%;
+    /*white-space: nowrap;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+}
+
+.radios .list .list-media .icon {
+    position: absolute;
+    display: block;
+    z-index: 10;
+    height: 24px;
+    bottom: 5px;
+    right: 5px;
+    width: 24px;
+    background-position: 0 0;
+    background-image: url(../images/list_sprite.png);
+    background-repeat: no-repeat;
+    background-size: 24px 60px;
+}
+
+
+
+.popular-list {
+    margin: 0 10px 7px;  
+}
+
+.popular-list .title {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 11px;
+    font-weight: normal;
+}
+
+.popular-list .list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: -8px;
+}
+/*这个写了width：50%了感觉flex：1和flex-basisi:50%就没有啥用，不要flex:1和width:50%的话可以加个overflow:hidden*/
+.popular-list .list-item {
+    flex: 1;
+    flex-basis: 50%;
+    box-sizing: border-box;
+    padding-right: 8px;
+    margin-bottom: 10px;
+    background: #fff;
+    width: 50%;
+}
+
+.popular-list .list .list-item .list-media {
+    position: relative;
+    margin-bottom: 5px;
+}
+.popular-list .list .list-item .list-media img {
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+
+.popular-list .list .list-item .list-detail {
+    padding: 0 7px 5px;
+    color: #000;
+}
+
+.popular-list .list-title {
+    font-size: 14px;
+}
+.popular-list .list-text {
+    font-size: 12px;
+}
+.popular-list .list-title, .popular-list .list-text {
+    /*height: 36px;*/
+    /*line-height: 18px;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    color: #000;
+}
+
+.popular-list .list .list-media .icon {
+    position: absolute;
+    display: block;
+    z-index: 10;
+    height: 24px;
+    bottom: 5px;
+    right: 5px;
+    width: 24px;
+    background-position: 0 0;
+    background-image: url(../images/list_sprite.png);
+    background-repeat: no-repeat;
+    background-size: 24px 60px;
+}
+
+.popular-list .more {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.popular-list .more a {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 14px;
+    color: rgba(0,0,0,.6);
+}
+
+
+.footer {
+    padding: 15px 0;
+}
+.footer .version {
+    text-align: center;
+    margin-bottom: 16px;
+}
+.footer .version a {
+    position: relative;
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    color: #000;
+}
+
+.footer .footer_logo {
+    display: block;
+    width: 82px;
+    height: 24px;
+    margin: 0 auto 10px;
+    background-image: url(../images/logo_footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-indent: -9999px;
+}
+
+.footer .copyright {
+    font-size: 10px;
+    text-align: center;
+    color: rgba(0,0,0,.5);
+}
