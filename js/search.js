@@ -35,11 +35,8 @@ function searchs() {
     let $search_record = $search_wrap.querySelector('.search-record ul');
     let $record_clear = $search_wrap.querySelector('.record-clear');
     let $loading = $search_wrap.querySelector('.loading');
-    var keyword = '';
+    // var keyword = '';
     var page = 1;
-    var songs = {};
-
-
 
     $search_wrap.addEventListener('click', function (event) {
         let target = event.target;
@@ -100,6 +97,8 @@ function searchs() {
                 save(keyword);
                 renderRecord();
                 break;
+            default:
+                break;
         }
     })
 
@@ -138,17 +137,18 @@ function searchs() {
 
 
     function onScroll() {
-        if (document.documentElement.clientHeight + document.body.scrollTop > document.body.scrollHeight - 50) {
-            fetch(`https://qq-music-api.now.sh/search?keyword=${keyword}&page=${page++}`)
+        let keyword = $search_input.value.trim();
+        if (document.documentElement.clientHeight + document.documentElement.scrollTop > document.documentElement.scrollHeight - 50) {
+            fetch(`https://qq-music-api.now.sh/search?keyword=${keyword}&page=${++page}`)
                 .then(res => res.json())
                 .then(json => {
-                    searchList(songs);
+                    searchList(json.data);
                     if (json.message === 'no results') {
                         window.removeEventListener('scroll', onScroll);
                         document.querySelector('.loading-all').style.display = 'block';
+                        $loading.style.display = 'none';
                     }
                 })
-            console.log('滚了滚了')
         }
     }
 
@@ -190,6 +190,9 @@ function searchs() {
                 document.querySelector('#player .song-name').innerHTML = `${item.children[0].children[1].innerText}`;
                 document.querySelector('#player .singer-name').innerHTML = `${item.children[0].children[2].innerText}`;  //换个fetch json 那个可以?
 
+                fetch(`https://qq-music-api.now.sh/lyrics?id=${item.dataset.songid}`)
+                    .then(res => res.json())
+                    .then(json => json.lyric)
                 // listsongs.song.list.map((item,i) => {
                 //     let singer = item.singer.map(item => item.name).join('/');
                 //     item[i].addEventListener('click', function (event) {
